@@ -13,3 +13,4 @@ TaskStacker App is a simple web application that allows users to manage and orga
 ## Demo
 
 * Link: https://taskstacker.netlify.app/
+
