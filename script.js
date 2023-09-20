@@ -67,32 +67,27 @@ function renderTasks() {
     taskList.innerHTML = '';
 
     tasksArray.forEach((task, index) => {
+        
         const taskItem = document.createElement('li');
         taskItem.classList.add('task');
         taskItem.id = `${index}`;
 
-        const taskContent = document.createElement('div');
-        taskContent.classList.add('content');
-        taskContent.innerHTML = `
-            <svg data-action="check" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                <path data-action="check" ${task.checked ? 'd="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"'
-                : 'd="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"'}
-                />
-            </svg>
-            <input type="text" class="text" value="${task.value}" readonly="readonly">
-            `;
-
-        const taskActions = document.createElement('div');
-        taskActions.classList.add('actions');
-        taskActions.innerHTML = `
+        taskItem.innerHTML = `
+            <div class="content">
+                <svg data-action="check" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#ffffff">
+                    <path data-action="check" ${task.checked ? 'd="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"'
+                    : 'd="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"'}
+                    />
+                </svg>
+                <input type="text" class="text" value="${task.value}" readonly="readonly">
+            </div>
+            <div class="actions">
                 <button class="edit" data-action="edit">Edit</button>
                 <button class="delete" data-action="delete">Delete</button>
+            </div>
             `;
 
-        taskItem.appendChild(taskContent);
-        taskItem.appendChild(taskActions);
         taskList.appendChild(taskItem);
-
 
 
 
