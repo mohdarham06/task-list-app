@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="root">
+
+        <header>
+            <h1>Task List</h1>
+            <form id="new-task-form">
+                <input type="text" id="new-task-input" placeholder="What do you have planned?">
+
+                <input type="submit" id="new-task-submit" value="Add Task">
+            </form>
+        </header>
+
+
+        <main>
+            <section class="section-tasks">
+                <h2>Tasks</h2>
+
+                <ul id="task-list"></ul>
+            </section>
+        </main>
+
+
+        <footer>
+            <a class="credit" href="https://mohdarham.netlify.app/" target="_blank"> &copy; Mohd Arham 2023 &lt;/&gt;
+            </a>
+        </footer>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
