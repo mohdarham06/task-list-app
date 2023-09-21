@@ -42,7 +42,7 @@ form.addEventListener('submit', (e) => {
 
 // adding task
 function addNewTask() {
-    let taskValue = newTaskInput.value;
+    let taskValue = newTaskInput.value.trim();
     if (taskValue == '') {
         alert('task not found')
         return;
